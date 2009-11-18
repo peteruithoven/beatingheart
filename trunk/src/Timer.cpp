@@ -22,6 +22,7 @@ Timer::Timer()
 }
 void Timer::update(ofEventArgs & args)
 {
+	//cout << "Timer::update\n";
 	int elapsedTime = ofGetElapsedTimeMillis();
 	if(elapsedTime > startTime+interval)
 	 {
@@ -51,9 +52,11 @@ int Timer::getInterval()
 void Timer::setInterval(int value)
 {
 	interval = value;
+	//cout << "interval: " << interval << endl;
 };
 void Timer::start()
 {
+	//cout << "Timer::start\n";
 	startTime = ofGetElapsedTimeMillis();
 	running = true;
 	ofAddListener(ofEvents.update, this, &Timer::update);

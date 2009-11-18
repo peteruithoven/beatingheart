@@ -24,10 +24,13 @@ class Model{
 		void learnBackground();
 		int getThreshold();
 		void setThreshold(int threshold);
+		int getInterval();
+		float getFlowValue();
+		float getFlowIntervalRatio();
+		int getBaseInterval();
 		bool getDebug();
 		void setDebug(bool debug);
 		void storeValues();
-		
 		void onTick(int  & count);
 	
 		//TODO implement notify
@@ -37,10 +40,17 @@ class Model{
 		
 	protected:
 		Timer timer;
+		bool debugFlowValue;
+		float flowValue;
+		int flowIntervalRatio;
+		int interval;
+		int baseInterval;
+	
 		void parseXML();
 		void update(ofEventArgs & args);
 		void onFlowUpdate(float flowValue);
-		
+		void keyReleased(ofKeyEventArgs & args);
+		void keyPressed(ofKeyEventArgs & args);
 		void beat();
 };
 
