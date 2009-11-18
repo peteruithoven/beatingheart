@@ -28,7 +28,7 @@ void Display::draw(ofEventArgs & args)
 	displayStr += ofToString(threshold);
 	displayStr += "\n";
 	
-	cout << "displayStr: " << displayStr << endl;
+	//cout << "displayStr: " << displayStr << endl;
 	
 	ttf.drawString(displayStr, x, y);
 }
