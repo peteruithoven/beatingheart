@@ -1,90 +1,95 @@
 
-int lightPin     = 11;           
-int motorPin     = 12;  
-int ledPin       = 13;
-int switchPin    = 0;
-
-boolean beating   = false;
-
-int time         = 5;             // define delay element  
-
-
-int max          = 255;
+// light properties
+int lightPin     = 11;   
 int min          = 60; //0;
+int max          = 255;
+int pulsewidth   = min;            // define pulsewidth (0-255)  
+int pulseRange   = max-min;
 int inDelay      = 750; //200; //400;
 int outDelay     = 750; //200; //230;
-int shortDelay   = 0; //0;
-int longDelay    = 600;
+int shortDelay   = 0;
 
-int pulsewidth   = min;            // define pulsewidth (0-255)  
-int pulseRange   = 255;
+// relay properties
+int relayPin     = 12;  
+unsigned long switchedRelayTime = 0;
+unsigned long relaySwitchTime = 200;
+boolean switchingRelay = false;
 
-int startedMotorTime = 0;
-boolean startedMotor = false;
-int relaySwitchTime = 200;
+// switch properties
+int switchPin    = 2;
 
 void setup() 
 {  
   pinMode(lightPin,OUTPUT);
-  pinMode(motorPin,OUTPUT);
-  pinMode(ledPin,OUTPUT);
+  pinMode(relayPin,OUTPUT);
   pinMode(switchPin,INPUT);
-  
-  digitalWrite(switchPin,HIGH);
-  
+
+  digitalWrite(switchPin,HIGH);  
   analogWrite(lightPin, pulsewidth); 
-  
   Serial.begin(9600);
 }  
 
 void loop() 
 {
-  if(Serial.available() > 0 && Serial.read() == 'b')
+  if((Serial.available() > 0 && Serial.read() == 'b') || 
+    digitalRead(switchPin) == LOW)
   {
     beat();
-  }
-  if(digitalRead(switchPin) == LOW && !beating)
-  {
-    beat(); 
   }
 }  
 void beat()
 {
   Serial.println("beat");
-  beating = true;
-  pulseShape();
+  switchOnRelay();
   pulseLight();
   delay(shortDelay);
-  pulseShape();
+  switchOnRelay();
   pulseLight();
-  beating = false;
 }
-void pulseShape()
+void switchOnRelay()
 {
-  digitalWrite(motorPin,HIGH);
-  digitalWrite(ledPin,HIGH);
-  startedMotorTime = millis();
+  Serial.println("switchOnRelay");
+  digitalWrite(relayPin,HIGH);
+  switchedRelayTime = millis();
+  Serial.print("switchedRelayTime: ");
+  Serial.println(switchedRelayTime);
+  switchingRelay = true;
 }
 void pulseLight()
 {
+  printTime();
+  Serial.println("pulseLight");
   // slowly fade the LEDs to full brightness  
   for (pulsewidth=min; pulsewidth <= max; pulsewidth++){  
     analogWrite(lightPin, pulsewidth); 
-    
-    if(millis() > startedMotorTime+relaySwitchTime)
-    {
-      digitalWrite(motorPin,LOW);
-      digitalWrite(ledPin,LOW); 
-    }
-    
+    switchOffRelay();
     delay(outDelay/pulseRange);
   }  
-  
-  
-  
+  printTime();
+  switchOffRelay();
   // slowly dim the LEDs  
-  for (pulsewidth=max; pulsewidth >= min; pulsewidth--){  
+  for (pulsewidth=max; pulsewidth >= min; pulsewidth--)
+  {  
     analogWrite(lightPin, pulsewidth); 
-    delay(inDelay/max);  
+    switchOffRelay();
+    delay(inDelay/max); 
   }
+  printTime();
+}
+void switchOffRelay()
+{
+ 
+  if(millis() > switchedRelayTime+relaySwitchTime && switchingRelay)
+    {
+      Serial.println("switchOffRelay really");
+      digitalWrite(relayPin,LOW);
+      switchingRelay = false;
+    }
+}
+void printTime()
+{
+  Serial.print(millis());
+  Serial.print(" : ");
+  Serial.println((switchedRelayTime+relaySwitchTime));
+  
 }
