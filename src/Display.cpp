@@ -27,6 +27,18 @@ void Display::draw(ofEventArgs & args)
 	displayStr += "Threshold: ";
 	displayStr += ofToString(threshold);
 	displayStr += "\n";
+	displayStr += "flowValue: ";
+	displayStr += ofToString(flowValue);
+	displayStr += "\n";
+	displayStr += "flowIntervalRatio: ";
+	displayStr += ofToString(flowIntervalRatio);
+	displayStr += "\n";
+	displayStr += "baseInterval: ";
+	displayStr += ofToString(baseInterval);
+	displayStr += "\n";
+	displayStr += "Interval: ";
+	displayStr += ofToString(interval);
+	displayStr += "\n";
 	
 	//cout << "displayStr: " << displayStr << endl;
 	

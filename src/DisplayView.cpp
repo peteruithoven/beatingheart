@@ -22,5 +22,9 @@ void DisplayView::setModel(Model * model)
 
 void DisplayView::onValuesUpdated(int & arg)
 {
-	
+	display.threshold = model->getThreshold();
+	display.flowValue = model->getFlowValue();
+	display.flowIntervalRatio = model->getFlowIntervalRatio();
+	display.baseInterval = model->getBaseInterval();
+	display.interval = model->getInterval();
 }

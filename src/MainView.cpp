@@ -33,4 +33,5 @@ void MainView::draw(ofEventArgs & args)
 void MainView::onBeat(int & fake)
 {
 	fysicalHeart.beat();
+	soundPlayer.beat();
 }
