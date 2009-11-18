@@ -16,6 +16,7 @@
 
 #include "Model.h"
 #include "BaseView.h"
+#include "FysicalHeart.h"
 
 class MainView : public BaseView
 {
@@ -25,11 +26,12 @@ class MainView : public BaseView
 		MainView();
 	
 		void draw(ofEventArgs & args);
-		
 		void setModel(Model * model);
 		
 	protected:
-	
+		FysicalHeart fysicalHeart;
+		
+		void onBeat(int & fake);
 };
 
 #endif

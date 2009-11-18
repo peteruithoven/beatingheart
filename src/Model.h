@@ -12,6 +12,7 @@
 
 #include "ofEvents.h"
 #include "ofxXmlSettings.h"
+#include "Timer.h"
 
 class Model{
 
@@ -27,14 +28,20 @@ class Model{
 		void setDebug(bool debug);
 		void storeValues();
 		
+		void onTick(int  & count);
+	
 		//TODO implement notify
 		ofEvent< float > FLOW_UPDATE;
+		ofEvent<int> BEAT;
 		ofEvent< int > VALUES_UPDATED;
 		
 	protected:
-	
+		Timer timer;
 		void parseXML();
+		void update(ofEventArgs & args);
 		void onFlowUpdate(float flowValue);
+		
+		void beat();
 };
 
 #endif

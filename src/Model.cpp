@@ -8,21 +8,33 @@
  */
 
 #include "Model.h"
-#include "ofEvents.h"
 
 Model::Model()
 {
+	ofAddListener(ofEvents.update, this, &Model::update);
+	
+	ofAddListener(timer.TICK, this, &Model::onTick);
+}
+
+void Model::onTick(int  & count)
+{
+	beat();
+}
+
+void Model::update(ofEventArgs & args)
+{ 
 	
 }
+	
 void Model::loadData()
 {
-	cout << "\nModel::loadData";
+	cout << "Model::loadData\n";
 	
-	cout << "\n loading settings.xml";
+	cout << " loading settings.xml\n";
 	if( xml.loadFile("settings.xml") ){
-		cout << "\nsettings.xml loaded!";
+		cout << "settings.xml loaded!\n";
 	}else{
-		cout << "\nunable to load settings.xml check data/ folder";
+		cout << "unable to load settings.xml check data/ folder\n";
 	}
 	
 	parseXML();
@@ -31,9 +43,34 @@ void Model::loadData()
 }
 void Model::parseXML()
 {
-	cout << "\nModel::parseXML";
+	cout << "Model::parseXML\n";
 	
-				
+	//TODO fill properties like flow -> interval scale etc. 
+	
+	//TODO start system
+	onFlowUpdate(1);
+}
+
+void Model::onFlowUpdate(float flowValue)
+{
+	cout << "Model::onFlowUpdate\n";
+	//TODO translate flowValue to interval with some kind of scale
+	//  flowValue should be between 0 and 1
+	
+	
+	// store interval
+	// if interval complete begin new interval
+	timer.setInterval(flowValue*1200);
+	// after interfal: beat!
+	if(!timer.getRunning())
+		timer.start();
+}
+
+void Model::beat()
+{
+	cout << "Model::beat\n";
+	int someInt = 0;
+	ofNotifyEvent(BEAT,someInt,this);
 }
 
 void Model::learnBackground()
