@@ -5,7 +5,6 @@
 #include "ofMain.h"
 #include "Model.h"
 #include "MainView.h"
-#include "KeyboardView.h"
 #include "DisplayView.h"
 
 class testApp : public ofBaseApp{
@@ -14,7 +13,6 @@ class testApp : public ofBaseApp{
 	
 		Model model;
 		MainView mainView;
-		KeyboardView keyboardView;
 		DisplayView displayView;
 	
 		void setup();

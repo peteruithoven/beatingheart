@@ -11,7 +11,7 @@
 
 Model::Model()
 {
-	debugFlowValue = true;
+	useManualFlowValue = true;
 	
 	ofAddListener(ofEvents.update, this, &Model::update);
 	ofAddListener(ofEvents.keyReleased, this, &Model::keyReleased);
@@ -22,15 +22,18 @@ Model::Model()
 
 void Model::update(ofEventArgs & args)
 { 
-	
+	//TODO get flowValue from Flow Detection instance
+	//flowValue = value;
+	//updateInterval();
 }
 void Model::keyReleased(ofKeyEventArgs & args)
 {
 	switch (args.key){
 		case ' ':
 			 //model->learnBackground();
+			 updateInterval();
 			 break;
-		case '+':
+		/*case '+':
 		case '=':
 			 //model->setThreshold(model->getThreshold()+1);
 			 break;
@@ -47,9 +50,8 @@ void Model::keyReleased(ofKeyEventArgs & args)
 			break;
 		case '.':
 			onFlowUpdate(flowValue-0.1);
-			break;
-	};
-	
+			break;*/
+	}
 };
 void Model::keyPressed(ofKeyEventArgs & args)
 {
@@ -60,50 +62,46 @@ void Model::loadData()
 	cout << "Model::loadData\n";
 	
 	cout << " loading settings.xml\n";
-	if( xml.loadFile("settings.xml") ){
-		cout << "settings.xml loaded!\n";
-	}else{
+	if( xml.loadFile("settings.xml") )
+	{
+	   cout << "settings.xml loaded!\n";
+	   parseXML();
+	   storeValues();
+	   
+	   // start system
+	   flowValue = 0.3;
+	   updateInterval();
+	}
+	else
+	{
 		cout << "unable to load settings.xml check data/ folder\n";
 	}
-	
-	parseXML();
-	
-	storeValues();
 }
 void Model::parseXML()
 {
 	cout << "Model::parseXML\n";
 	
-	//TODO fill properties like flow -> interval scale etc. 
-	baseInterval = 2000;
-	flowIntervalRatio = 5000;
-	
-	//TODO start system
-	onFlowUpdate(0.3);
 }
 
-void Model::onFlowUpdate(float value)
+void Model::updateInterval()
 {
-	cout << "Model::onFlowUpdate, value: " << value << "\n";
-	flowValue = value;
+	// limit flowValue
+	if(manualFlowValue)
+		flowValue = manualFlowValue;
 	
-	// limit flowValue 
 	if(flowValue < 0)
 		flowValue = 0;
 	else if(flowValue > 1)
 		flowValue = 1;	
 	
-	//TODO translate flowValue to interval with some kind of scale
-	//  flowValue should be between 0 and 1 (0: no flow, 1: really busy)
-	
-	interval = (1-flowValue)*flowIntervalRatio; //*1200
+	interval = (1-flowValue)*flowIntervalRatio;
 	interval += baseInterval;
 	
 	timer.setInterval(interval);
 	if(!timer.getRunning())
 		timer.start();
 	
-	storeValues();
+	storeValues();	
 }
 
 void Model::onTick(int  & count)
@@ -135,18 +133,6 @@ void Model::setThreshold(int threshold)
 	
 	storeValues();
 }
-float Model::getFlowValue()
-{
-	return flowValue;
-}
-float Model::getFlowIntervalRatio()
-{
-	return flowIntervalRatio;
-}
-int Model::getBaseInterval()
-{
-	return baseInterval;
-}
 int Model::getInterval()
 {
 	return interval;
@@ -163,11 +149,10 @@ void Model::setDebug(bool debug)
 
 void Model::storeValues()
 {
+	cout << "storeValues\n";
 	int fakeInt = 0;
 	ofNotifyEvent(VALUES_UPDATED,fakeInt,this);
 	
-	xml.setValue("threshold", getThreshold());
-	xml.setValue("flowIntervalRatio", flowIntervalRatio);
-	xml.setValue("baseInterval", baseInterval);
-	xml.saveFile("settings.xml");
+	cout << "  flowIntervalRatio: " << flowIntervalRatio << endl;
+	cout << "  baseInterval: " << baseInterval << endl;
 }
