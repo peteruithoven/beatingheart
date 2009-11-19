@@ -3,7 +3,6 @@
 //--------------------------------------------------------------
 void testApp::setup(){
 	mainView.setModel(&model);
-	keyboardView.setModel(&model);
 	displayView.setModel(&model);
 	
 	model.loadData();

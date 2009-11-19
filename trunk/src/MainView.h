@@ -18,6 +18,7 @@
 #include "BaseView.h"
 #include "FysicalHeart.h"
 #include "HeartBeatSoundPlayer.h"
+#include "Settings.h"
 
 class MainView : public BaseView
 {
@@ -32,6 +33,8 @@ class MainView : public BaseView
 	protected:
 		FysicalHeart fysicalHeart;
 		HeartBeatSoundPlayer soundPlayer;
+		Settings settings;
+	
 		void onBeat(int & fake);
 };
 

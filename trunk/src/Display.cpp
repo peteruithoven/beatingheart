@@ -18,6 +18,7 @@ Display::Display()
 }
 void Display::draw(ofEventArgs & args)
 { 
+	return;
 	ofSetColor(200, 200, 200);
 	
 	int x = 20;

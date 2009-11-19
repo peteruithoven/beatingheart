@@ -12,7 +12,6 @@
 
 #include <ofUtils.h>
 #include <Model.h>
-#include <KeyboardController.h>
 
 class BaseView
 {

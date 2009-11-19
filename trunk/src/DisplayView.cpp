@@ -17,14 +17,14 @@ DisplayView::DisplayView()
 void DisplayView::setModel(Model * model)
 {
 	this->model = model;
-	ofAddListener(model->VALUES_UPDATED,this,&DisplayView::onValuesUpdated);
+	//ofAddListener(model->VALUES_UPDATED,this,&DisplayView::onValuesUpdated);
 }
 
-void DisplayView::onValuesUpdated(int & arg)
+/*void DisplayView::onValuesUpdated(int & arg)
 {
 	display.threshold = model->getThreshold();
-	display.flowValue = model->getFlowValue();
-	display.flowIntervalRatio = model->getFlowIntervalRatio();
-	display.baseInterval = model->getBaseInterval();
+	display.flowValue = model->flowValue();
+	display.flowIntervalRatio = model->flowIntervalRatio;
+	display.baseInterval = model->baseInterval;
 	display.interval = model->getInterval();
-}
+}*/

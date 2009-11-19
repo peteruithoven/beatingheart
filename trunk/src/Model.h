@@ -22,35 +22,35 @@ class Model{
 		Model();
 		void loadData();
 		void learnBackground();
+	
 		int getThreshold();
 		void setThreshold(int threshold);
 		int getInterval();
-		float getFlowValue();
-		float getFlowIntervalRatio();
-		int getBaseInterval();
+	
+		float flowValue;
+		float manualFlowValue;
+		bool useManualFlowValue;
+		int flowIntervalRatio;
+		int baseInterval;
+		int interval;
+	
 		bool getDebug();
 		void setDebug(bool debug);
+	
 		void storeValues();
 		void onTick(int  & count);
 	
-		//TODO implement notify
-		ofEvent< float > FLOW_UPDATE;
 		ofEvent<int> BEAT;
 		ofEvent< int > VALUES_UPDATED;
 		
 	protected:
 		Timer timer;
-		bool debugFlowValue;
-		float flowValue;
-		int flowIntervalRatio;
-		int interval;
-		int baseInterval;
-	
 		void parseXML();
 		void update(ofEventArgs & args);
 		void onFlowUpdate(float flowValue);
 		void keyReleased(ofKeyEventArgs & args);
 		void keyPressed(ofKeyEventArgs & args);
+		void updateInterval();
 		void beat();
 };
 
