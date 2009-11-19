@@ -5,9 +5,9 @@ int min          = 60; //0;
 int max          = 255;
 int pulsewidth   = min;            // define pulsewidth (0-255)  
 int pulseRange   = max-min;
-int inDelay      = 750; //200; //400;
-int outDelay     = 750; //200; //230;
-int shortDelay   = 0;
+int inDelay      = 100; //500; //200; //400;
+int outDelay     = 100; //500; //200; //230;
+int shortDelay   = 0; //100;
 
 // relay properties
 int relayPin     = 12;  
@@ -39,33 +39,33 @@ void loop()
 }  
 void beat()
 {
-  Serial.println("beat");
+  //Serial.println("beat");
   switchOnRelay();
   pulseLight();
   delay(shortDelay);
-  switchOnRelay();
+  //switchOnRelay();
   pulseLight();
 }
 void switchOnRelay()
 {
-  Serial.println("switchOnRelay");
+  //Serial.println("switchOnRelay");
   digitalWrite(relayPin,HIGH);
   switchedRelayTime = millis();
-  Serial.print("switchedRelayTime: ");
-  Serial.println(switchedRelayTime);
+  //Serial.print("switchedRelayTime: ");
+  //Serial.println(switchedRelayTime);
   switchingRelay = true;
 }
 void pulseLight()
 {
-  printTime();
-  Serial.println("pulseLight");
+  //printTime();
+  //Serial.println("pulseLight");
   // slowly fade the LEDs to full brightness  
   for (pulsewidth=min; pulsewidth <= max; pulsewidth++){  
     analogWrite(lightPin, pulsewidth); 
     switchOffRelay();
     delay(outDelay/pulseRange);
   }  
-  printTime();
+  //printTime();
   switchOffRelay();
   // slowly dim the LEDs  
   for (pulsewidth=max; pulsewidth >= min; pulsewidth--)
@@ -74,22 +74,21 @@ void pulseLight()
     switchOffRelay();
     delay(inDelay/max); 
   }
-  printTime();
+  //printTime();
 }
 void switchOffRelay()
 {
  
   if(millis() > switchedRelayTime+relaySwitchTime && switchingRelay)
     {
-      Serial.println("switchOffRelay really");
+      //Serial.println("switchOffRelay really");
       digitalWrite(relayPin,LOW);
       switchingRelay = false;
     }
 }
-void printTime()
+/*void printTime()
 {
   Serial.print(millis());
   Serial.print(" : ");
   Serial.println((switchedRelayTime+relaySwitchTime));
-  
-}
+}*/
