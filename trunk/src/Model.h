@@ -20,11 +20,8 @@ class Model{
 		ofxXmlSettings xml;
 		
 		Model();
-		void loadData();
-		void learnBackground();
+		void start();
 	
-		int getThreshold();
-		void setThreshold(int threshold);
 		int getInterval();
 	
 		float flowValue;
@@ -37,19 +34,15 @@ class Model{
 		bool getDebug();
 		void setDebug(bool debug);
 	
-		void storeValues();
-		void onTick(int  & count);
+		
 	
 		ofEvent<int> BEAT;
 		ofEvent< int > VALUES_UPDATED;
 		
 	protected:
 		Timer timer;
-		void parseXML();
 		void update(ofEventArgs & args);
-		void onFlowUpdate(float flowValue);
-		void keyReleased(ofKeyEventArgs & args);
-		void keyPressed(ofKeyEventArgs & args);
+		void onTick(int  & count);
 		void updateInterval();
 		void beat();
 };
