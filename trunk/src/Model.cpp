@@ -33,7 +33,7 @@ void Model::start()
 void Model::updateInterval()
 {
 	// limit flowValue
-	if(manualFlowValue)
+	if(useManualFlowValue)
 		flowValue = manualFlowValue;
 	
 	if(flowValue < 0)
