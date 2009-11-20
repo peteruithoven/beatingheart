@@ -1,3 +1,4 @@
 <threshold>1</threshold>
 <flowIntervalRatio>5000</flowIntervalRatio>
-<baseInterval>3833</baseInterval>
+<baseInterval>20000</baseInterval>
+<test>5</test>
