@@ -5,7 +5,7 @@ void testApp::setup(){
 	mainView.setModel(&model);
 	displayView.setModel(&model);
 	
-	model.loadData();
+	model.start();
 	
 	ofSetFrameRate(31);
 }
