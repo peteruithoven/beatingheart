@@ -15,10 +15,11 @@
 #include <vector>
 #include "Timer.h"
 
+
+
 class HeartBeatSoundPlayer{
 
 public:
-	
 	
 	HeartBeatSoundPlayer();
 	void beat();
@@ -32,6 +33,7 @@ protected:
 	
 	void onTick(int  & count);
 	void refillBeatsToPlay();
+	vector<string> shuffle(vector<string>);
 };
 
 #endif
