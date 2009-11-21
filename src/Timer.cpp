@@ -27,7 +27,10 @@ void Timer::update(ofEventArgs & args)
 	if(elapsedTime > startTime+interval)
 	 {
 		tick();
-		start();
+		if(count < repeatCount || repeatCount == 0)
+			start();
+		else
+			reset();
 	 }
 }
 void Timer::tick()
@@ -53,6 +56,15 @@ void Timer::setInterval(int value)
 {
 	interval = value;
 	//cout << "interval: " << interval << endl;
+};
+int Timer::getRepeatCount()
+{
+	return repeatCount;
+};	
+void Timer::setRepeatCount(int value)
+{
+	repeatCount = value;
+	//cout << "repeatCount: " << repeatCount << endl;
 };
 void Timer::start()
 {

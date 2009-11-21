@@ -12,15 +12,15 @@
 FysicalHeart::FysicalHeart()
 {
 	//serial.setup("/dev/tty.usbserial-A70060V8", 9600);
-	serial.setup("/dev/tty.usbserial-A9007L0E", 9600);
-	serial.startContinuesRead();
-	ofAddListener(serial.NEW_MESSAGE,this,&FysicalHeart::onNewMessage);
+	//serial.setup("/dev/tty.usbserial-A9007L0E", 9600);
+	//serial.startContinuesRead();
+	//ofAddListener(serial.NEW_MESSAGE,this,&FysicalHeart::onNewMessage);
 }
 
 void FysicalHeart::beat()
 {
 	cout << "FysicalHeart::beat\n";
-	serial.writeByte('b');
+	//serial.writeByte('b');
 }
 
 void FysicalHeart::onNewMessage(string & message)

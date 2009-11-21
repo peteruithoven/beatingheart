@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		D001605110B2291000726473 /* ofxSimpleSerial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D001604210B2291000726473 /* ofxSimpleSerial.cpp */; };
+		D026372110B7681000BCB4DB /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026371F10B7681000BCB4DB /* Timer.cpp */; };
+		D026377110B7686500BCB4DB /* ofxMSAInteractiveObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026373B10B7686500BCB4DB /* ofxMSAInteractiveObject.cpp */; };
+		D026377610B7686500BCB4DB /* ofxSimpleGuiConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026375310B7686500BCB4DB /* ofxSimpleGuiConfig.cpp */; };
+		D026377710B7686500BCB4DB /* ofxSimpleGuiControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026375510B7686500BCB4DB /* ofxSimpleGuiControl.cpp */; };
+		D026377810B7686500BCB4DB /* ofxSimpleGuiPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026375810B7686500BCB4DB /* ofxSimpleGuiPage.cpp */; };
+		D026377910B7686500BCB4DB /* ofxSimpleGuiToo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026375A10B7686500BCB4DB /* ofxSimpleGuiToo.cpp */; };
+		D026377D10B7686500BCB4DB /* ofxMatrix3x3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026376410B7686500BCB4DB /* ofxMatrix3x3.cpp */; };
+		D026378A10B7695900BCB4DB /* FysicalHeart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026378610B7695900BCB4DB /* FysicalHeart.cpp */; };
+		D026378B10B7695900BCB4DB /* HeartBeatSoundPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026378810B7695900BCB4DB /* HeartBeatSoundPlayer.cpp */; };
+		D026378E10B7696500BCB4DB /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026378C10B7696500BCB4DB /* Settings.cpp */; };
 		D0317A7610B222AE002A5548 /* BaseController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0317A6410B222AE002A5548 /* BaseController.cpp */; };
 		D0317A7710B222AE002A5548 /* BaseView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0317A6610B222AE002A5548 /* BaseView.cpp */; };
 		D0317A7810B222AE002A5548 /* Display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0317A6810B222AE002A5548 /* Display.cpp */; };
 		D0317A7910B222AE002A5548 /* DisplayObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0317A6A10B222AE002A5548 /* DisplayObject.cpp */; };
 		D0317A7A10B222AE002A5548 /* DisplayView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0317A6C10B222AE002A5548 /* DisplayView.cpp */; };
-		D0317A7B10B222AE002A5548 /* KeyboardController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0317A6E10B222AE002A5548 /* KeyboardController.cpp */; };
-		D0317A7C10B222AE002A5548 /* KeyboardView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0317A7010B222AE002A5548 /* KeyboardView.cpp */; };
 		D0317A7D10B222AE002A5548 /* MainView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0317A7210B222AE002A5548 /* MainView.cpp */; };
 		D0317A7E10B222AE002A5548 /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0317A7410B222AE002A5548 /* Model.cpp */; };
 		D0A1ACC310B21C7F004B1492 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A1AC8610B21C7E004B1492 /* libcv.a */; };
@@ -92,6 +100,47 @@
 /* Begin PBXFileReference section */
 		D001604210B2291000726473 /* ofxSimpleSerial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxSimpleSerial.cpp; path = openFrameworks/addons/ofxSimpleSerial/src/ofxSimpleSerial.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D001604310B2291000726473 /* ofxSimpleSerial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleSerial.h; path = openFrameworks/addons/ofxSimpleSerial/src/ofxSimpleSerial.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026371F10B7681000BCB4DB /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/Timer.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026372010B7681000BCB4DB /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = openFrameworks/apps/projects/BeatingHeart/src/Timer.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026373B10B7686500BCB4DB /* ofxMSAInteractiveObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxMSAInteractiveObject.cpp; path = openFrameworks/addons/ofxMSAInteractiveObject/src/ofxMSAInteractiveObject.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026373C10B7686500BCB4DB /* ofxMSAInteractiveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxMSAInteractiveObject.h; path = openFrameworks/addons/ofxMSAInteractiveObject/src/ofxMSAInteractiveObject.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026374610B7686500BCB4DB /* ofxSimpleGuiButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiButton.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiButton.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026374710B7686500BCB4DB /* ofxSimpleGuiContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiContent.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiContent.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026374810B7686500BCB4DB /* ofxSimpleGuiFPSCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiFPSCounter.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiFPSCounter.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026374910B7686500BCB4DB /* ofxSimpleGuiMovieSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiMovieSlider.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiMovieSlider.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026374A10B7686500BCB4DB /* ofxSimpleGuiOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiOption.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiOption.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026374B10B7686500BCB4DB /* ofxSimpleGuiOptionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiOptionGroup.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiOptionGroup.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026374C10B7686500BCB4DB /* ofxSimpleGuiQuadWarp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiQuadWarp.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiQuadWarp.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026374D10B7686500BCB4DB /* ofxSimpleGuiSlider2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiSlider2d.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSlider2d.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026374E10B7686500BCB4DB /* ofxSimpleGuiSliderBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiSliderBase.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSliderBase.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026374F10B7686500BCB4DB /* ofxSimpleGuiSliderFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiSliderFloat.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSliderFloat.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026375010B7686500BCB4DB /* ofxSimpleGuiSliderInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiSliderInt.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiSliderInt.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026375110B7686500BCB4DB /* ofxSimpleGuiTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiTitle.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiTitle.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026375210B7686500BCB4DB /* ofxSimpleGuiToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiToggle.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls/ofxSimpleGuiToggle.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026375310B7686500BCB4DB /* ofxSimpleGuiConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxSimpleGuiConfig.cpp; path = openFrameworks/addons/ofxSimpleGuiToo/src/ofxSimpleGuiConfig.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026375410B7686500BCB4DB /* ofxSimpleGuiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiConfig.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/ofxSimpleGuiConfig.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026375510B7686500BCB4DB /* ofxSimpleGuiControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxSimpleGuiControl.cpp; path = openFrameworks/addons/ofxSimpleGuiToo/src/ofxSimpleGuiControl.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026375610B7686500BCB4DB /* ofxSimpleGuiControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiControl.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/ofxSimpleGuiControl.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026375710B7686500BCB4DB /* ofxSimpleGuiIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiIncludes.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/ofxSimpleGuiIncludes.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026375810B7686500BCB4DB /* ofxSimpleGuiPage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxSimpleGuiPage.cpp; path = openFrameworks/addons/ofxSimpleGuiToo/src/ofxSimpleGuiPage.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026375910B7686500BCB4DB /* ofxSimpleGuiPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiPage.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/ofxSimpleGuiPage.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026375A10B7686500BCB4DB /* ofxSimpleGuiToo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxSimpleGuiToo.cpp; path = openFrameworks/addons/ofxSimpleGuiToo/src/ofxSimpleGuiToo.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026375B10B7686500BCB4DB /* ofxSimpleGuiToo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiToo.h; path = openFrameworks/addons/ofxSimpleGuiToo/src/ofxSimpleGuiToo.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026376410B7686500BCB4DB /* ofxMatrix3x3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxMatrix3x3.cpp; path = openFrameworks/addons/ofxVectorMath/src/ofxMatrix3x3.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026376510B7686500BCB4DB /* ofxMatrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxMatrix3x3.h; path = openFrameworks/addons/ofxVectorMath/src/ofxMatrix3x3.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026376610B7686500BCB4DB /* ofxPoint2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxPoint2f.h; path = openFrameworks/addons/ofxVectorMath/src/ofxPoint2f.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026376710B7686500BCB4DB /* ofxPoint3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxPoint3f.h; path = openFrameworks/addons/ofxVectorMath/src/ofxPoint3f.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026376810B7686500BCB4DB /* ofxPoint4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxPoint4f.h; path = openFrameworks/addons/ofxVectorMath/src/ofxPoint4f.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026376910B7686500BCB4DB /* ofxVec2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxVec2f.h; path = openFrameworks/addons/ofxVectorMath/src/ofxVec2f.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026376A10B7686500BCB4DB /* ofxVec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxVec3f.h; path = openFrameworks/addons/ofxVectorMath/src/ofxVec3f.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026376B10B7686500BCB4DB /* ofxVec4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxVec4f.h; path = openFrameworks/addons/ofxVectorMath/src/ofxVec4f.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026376C10B7686500BCB4DB /* ofxVectorMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxVectorMath.h; path = openFrameworks/addons/ofxVectorMath/src/ofxVectorMath.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026378610B7695900BCB4DB /* FysicalHeart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FysicalHeart.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/FysicalHeart.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026378710B7695900BCB4DB /* FysicalHeart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FysicalHeart.h; path = openFrameworks/apps/projects/BeatingHeart/src/FysicalHeart.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026378810B7695900BCB4DB /* HeartBeatSoundPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HeartBeatSoundPlayer.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/HeartBeatSoundPlayer.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026378910B7695900BCB4DB /* HeartBeatSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeartBeatSoundPlayer.h; path = openFrameworks/apps/projects/BeatingHeart/src/HeartBeatSoundPlayer.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026378C10B7696500BCB4DB /* Settings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Settings.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/Settings.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D026378D10B7696500BCB4DB /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = openFrameworks/apps/projects/BeatingHeart/src/Settings.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D0317A6410B222AE002A5548 /* BaseController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseController.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/BaseController.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D0317A6510B222AE002A5548 /* BaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseController.h; path = openFrameworks/apps/projects/BeatingHeart/src/BaseController.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D0317A6610B222AE002A5548 /* BaseView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseView.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/BaseView.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
@@ -102,10 +151,6 @@
 		D0317A6B10B222AE002A5548 /* DisplayObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayObject.h; path = openFrameworks/apps/projects/BeatingHeart/src/DisplayObject.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D0317A6C10B222AE002A5548 /* DisplayView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DisplayView.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/DisplayView.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D0317A6D10B222AE002A5548 /* DisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayView.h; path = openFrameworks/apps/projects/BeatingHeart/src/DisplayView.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
-		D0317A6E10B222AE002A5548 /* KeyboardController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardController.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/KeyboardController.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
-		D0317A6F10B222AE002A5548 /* KeyboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyboardController.h; path = openFrameworks/apps/projects/BeatingHeart/src/KeyboardController.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
-		D0317A7010B222AE002A5548 /* KeyboardView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardView.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/KeyboardView.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
-		D0317A7110B222AE002A5548 /* KeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyboardView.h; path = openFrameworks/apps/projects/BeatingHeart/src/KeyboardView.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D0317A7210B222AE002A5548 /* MainView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainView.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/MainView.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D0317A7310B222AE002A5548 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainView.h; path = openFrameworks/apps/projects/BeatingHeart/src/MainView.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D0317A7410B222AE002A5548 /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Model.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/Model.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
@@ -404,13 +449,123 @@
 			path = openFrameworks/addons/ofxSimpleSerial/src;
 			sourceTree = SYSTEM_DEVELOPER_DIR;
 		};
+		D026371C10B767FB00BCB4DB /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				D026371F10B7681000BCB4DB /* Timer.cpp */,
+				D026372010B7681000BCB4DB /* Timer.h */,
+				D026371D10B7680000BCB4DB /* mvc */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		D026371D10B7680000BCB4DB /* mvc */ = {
+			isa = PBXGroup;
+			children = (
+				D0317A6610B222AE002A5548 /* BaseView.cpp */,
+				D0317A6710B222AE002A5548 /* BaseView.h */,
+				D0317A6410B222AE002A5548 /* BaseController.cpp */,
+				D0317A6510B222AE002A5548 /* BaseController.h */,
+			);
+			name = mvc;
+			sourceTree = "<group>";
+		};
+		D026373110B7686500BCB4DB /* ofxMSAInteractiveObject */ = {
+			isa = PBXGroup;
+			children = (
+				D026373A10B7686500BCB4DB /* src */,
+			);
+			name = ofxMSAInteractiveObject;
+			path = openFrameworks/addons/ofxMSAInteractiveObject;
+			sourceTree = SYSTEM_DEVELOPER_DIR;
+		};
+		D026373A10B7686500BCB4DB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D026373B10B7686500BCB4DB /* ofxMSAInteractiveObject.cpp */,
+				D026373C10B7686500BCB4DB /* ofxMSAInteractiveObject.h */,
+			);
+			name = src;
+			path = openFrameworks/addons/ofxMSAInteractiveObject/src;
+			sourceTree = SYSTEM_DEVELOPER_DIR;
+		};
+		D026373D10B7686500BCB4DB /* ofxSimpleGuiToo */ = {
+			isa = PBXGroup;
+			children = (
+				D026374410B7686500BCB4DB /* src */,
+			);
+			name = ofxSimpleGuiToo;
+			path = openFrameworks/addons/ofxSimpleGuiToo;
+			sourceTree = SYSTEM_DEVELOPER_DIR;
+		};
+		D026374410B7686500BCB4DB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D026374510B7686500BCB4DB /* Controls */,
+				D026375310B7686500BCB4DB /* ofxSimpleGuiConfig.cpp */,
+				D026375410B7686500BCB4DB /* ofxSimpleGuiConfig.h */,
+				D026375510B7686500BCB4DB /* ofxSimpleGuiControl.cpp */,
+				D026375610B7686500BCB4DB /* ofxSimpleGuiControl.h */,
+				D026375710B7686500BCB4DB /* ofxSimpleGuiIncludes.h */,
+				D026375810B7686500BCB4DB /* ofxSimpleGuiPage.cpp */,
+				D026375910B7686500BCB4DB /* ofxSimpleGuiPage.h */,
+				D026375A10B7686500BCB4DB /* ofxSimpleGuiToo.cpp */,
+				D026375B10B7686500BCB4DB /* ofxSimpleGuiToo.h */,
+			);
+			name = src;
+			path = openFrameworks/addons/ofxSimpleGuiToo/src;
+			sourceTree = SYSTEM_DEVELOPER_DIR;
+		};
+		D026374510B7686500BCB4DB /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				D026374610B7686500BCB4DB /* ofxSimpleGuiButton.h */,
+				D026374710B7686500BCB4DB /* ofxSimpleGuiContent.h */,
+				D026374810B7686500BCB4DB /* ofxSimpleGuiFPSCounter.h */,
+				D026374910B7686500BCB4DB /* ofxSimpleGuiMovieSlider.h */,
+				D026374A10B7686500BCB4DB /* ofxSimpleGuiOption.h */,
+				D026374B10B7686500BCB4DB /* ofxSimpleGuiOptionGroup.h */,
+				D026374C10B7686500BCB4DB /* ofxSimpleGuiQuadWarp.h */,
+				D026374D10B7686500BCB4DB /* ofxSimpleGuiSlider2d.h */,
+				D026374E10B7686500BCB4DB /* ofxSimpleGuiSliderBase.h */,
+				D026374F10B7686500BCB4DB /* ofxSimpleGuiSliderFloat.h */,
+				D026375010B7686500BCB4DB /* ofxSimpleGuiSliderInt.h */,
+				D026375110B7686500BCB4DB /* ofxSimpleGuiTitle.h */,
+				D026375210B7686500BCB4DB /* ofxSimpleGuiToggle.h */,
+			);
+			name = Controls;
+			path = openFrameworks/addons/ofxSimpleGuiToo/src/Controls;
+			sourceTree = SYSTEM_DEVELOPER_DIR;
+		};
+		D026375C10B7686500BCB4DB /* ofxVectorMath */ = {
+			isa = PBXGroup;
+			children = (
+				D026376310B7686500BCB4DB /* src */,
+			);
+			name = ofxVectorMath;
+			path = openFrameworks/addons/ofxVectorMath;
+			sourceTree = SYSTEM_DEVELOPER_DIR;
+		};
+		D026376310B7686500BCB4DB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D026376410B7686500BCB4DB /* ofxMatrix3x3.cpp */,
+				D026376510B7686500BCB4DB /* ofxMatrix3x3.h */,
+				D026376610B7686500BCB4DB /* ofxPoint2f.h */,
+				D026376710B7686500BCB4DB /* ofxPoint3f.h */,
+				D026376810B7686500BCB4DB /* ofxPoint4f.h */,
+				D026376910B7686500BCB4DB /* ofxVec2f.h */,
+				D026376A10B7686500BCB4DB /* ofxVec3f.h */,
+				D026376B10B7686500BCB4DB /* ofxVec4f.h */,
+				D026376C10B7686500BCB4DB /* ofxVectorMath.h */,
+			);
+			name = src;
+			path = openFrameworks/addons/ofxVectorMath/src;
+			sourceTree = SYSTEM_DEVELOPER_DIR;
+		};
 		D0317A8010B222B1002A5548 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				D0317A6E10B222AE002A5548 /* KeyboardController.cpp */,
-				D0317A6F10B222AE002A5548 /* KeyboardController.h */,
-				D0317A6410B222AE002A5548 /* BaseController.cpp */,
-				D0317A6510B222AE002A5548 /* BaseController.h */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -429,12 +584,8 @@
 			children = (
 				D0317A6C10B222AE002A5548 /* DisplayView.cpp */,
 				D0317A6D10B222AE002A5548 /* DisplayView.h */,
-				D0317A7010B222AE002A5548 /* KeyboardView.cpp */,
-				D0317A7110B222AE002A5548 /* KeyboardView.h */,
 				D0317A7210B222AE002A5548 /* MainView.cpp */,
 				D0317A7310B222AE002A5548 /* MainView.h */,
-				D0317A6610B222AE002A5548 /* BaseView.cpp */,
-				D0317A6710B222AE002A5548 /* BaseView.h */,
 				D0317A8310B222CC002A5548 /* components */,
 			);
 			name = view;
@@ -443,6 +594,12 @@
 		D0317A8310B222CC002A5548 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				D026378610B7695900BCB4DB /* FysicalHeart.cpp */,
+				D026378710B7695900BCB4DB /* FysicalHeart.h */,
+				D026378C10B7696500BCB4DB /* Settings.cpp */,
+				D026378D10B7696500BCB4DB /* Settings.h */,
+				D026378810B7695900BCB4DB /* HeartBeatSoundPlayer.cpp */,
+				D026378910B7695900BCB4DB /* HeartBeatSoundPlayer.h */,
 				D0317A6810B222AE002A5548 /* Display.cpp */,
 				D0317A6910B222AE002A5548 /* Display.h */,
 				D0317A6A10B222AE002A5548 /* DisplayObject.cpp */,
@@ -454,6 +611,9 @@
 		D0A1AC6610B21C62004B1492 /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				D026373110B7686500BCB4DB /* ofxMSAInteractiveObject */,
+				D026373D10B7686500BCB4DB /* ofxSimpleGuiToo */,
+				D026375C10B7686500BCB4DB /* ofxVectorMath */,
 				D001601B10B2290F00726473 /* ofxSimpleSerial */,
 				D0A1AC6810B21C7E004B1492 /* ofxOpenCv */,
 				D0A1ACAD10B21C7F004B1492 /* ofxXmlSettings */,
@@ -1121,6 +1281,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				D026371C10B767FB00BCB4DB /* utils */,
 				D0317A8210B222BD002A5548 /* view */,
 				D0317A8110B222B9002A5548 /* model */,
 				D0317A8010B222B1002A5548 /* controller */,
@@ -1240,11 +1401,19 @@
 				D0317A7810B222AE002A5548 /* Display.cpp in Sources */,
 				D0317A7910B222AE002A5548 /* DisplayObject.cpp in Sources */,
 				D0317A7A10B222AE002A5548 /* DisplayView.cpp in Sources */,
-				D0317A7B10B222AE002A5548 /* KeyboardController.cpp in Sources */,
-				D0317A7C10B222AE002A5548 /* KeyboardView.cpp in Sources */,
 				D0317A7D10B222AE002A5548 /* MainView.cpp in Sources */,
 				D0317A7E10B222AE002A5548 /* Model.cpp in Sources */,
 				D001605110B2291000726473 /* ofxSimpleSerial.cpp in Sources */,
+				D026372110B7681000BCB4DB /* Timer.cpp in Sources */,
+				D026377110B7686500BCB4DB /* ofxMSAInteractiveObject.cpp in Sources */,
+				D026377610B7686500BCB4DB /* ofxSimpleGuiConfig.cpp in Sources */,
+				D026377710B7686500BCB4DB /* ofxSimpleGuiControl.cpp in Sources */,
+				D026377810B7686500BCB4DB /* ofxSimpleGuiPage.cpp in Sources */,
+				D026377910B7686500BCB4DB /* ofxSimpleGuiToo.cpp in Sources */,
+				D026377D10B7686500BCB4DB /* ofxMatrix3x3.cpp in Sources */,
+				D026378A10B7695900BCB4DB /* FysicalHeart.cpp in Sources */,
+				D026378B10B7695900BCB4DB /* HeartBeatSoundPlayer.cpp in Sources */,
+				D026378E10B7696500BCB4DB /* Settings.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
