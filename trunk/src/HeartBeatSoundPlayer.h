@@ -12,16 +12,26 @@
 
 #include <ofUtils.h>
 #include <ofSoundPlayer.h>
+#include <vector>
+#include "Timer.h"
 
 class HeartBeatSoundPlayer{
 
 public:
+	
+	
 	HeartBeatSoundPlayer();
 	void beat();
 	
+	
 protected:
 	ofSoundPlayer	heart;
-	int				timeSoundCompleted;
+	vector<string>	beats;
+	vector<string>	beatsToPlay;
+	Timer timer;
+	
+	void onTick(int  & count);
+	void refillBeatsToPlay();
 };
 
 #endif
