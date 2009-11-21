@@ -8,6 +8,7 @@
  */
 
 #include "HeartBeatSoundPlayer.h"
+#include "ofMath.h"
 
 HeartBeatSoundPlayer::HeartBeatSoundPlayer()
 {
@@ -17,36 +18,14 @@ HeartBeatSoundPlayer::HeartBeatSoundPlayer()
 	ofAddListener(timer.TICK, this, &HeartBeatSoundPlayer::onTick);
 	
 	//TODO find the proper way to fill a vector with multiple items at once
-	/*beats.assign(
-				 "beat1.1.wav","beat1.2.wav",
-				 "beat2.1.wav","beat2.2.wav"
-				 );*/
-	
-	/*beats (
-				 "beat1.1.wav","beat1.2.wav",
-				 "beat2.1.wav","beat2.2.wav"
-				 );*/
-	
-	/*beats = (
-		   "beat1.1.wav","beat1.2.wav",
-		   "beat2.1.wav","beat2.2.wav"
-		   );*/
-	
-	/*beats = {
-			 "beat1.1.wav","beat1.2.wav",
-			 "beat2.1.wav","beat2.2.wav"
-			};*/
-	
 	beats.push_back("beat1.1.wav");
 		beats.push_back("beat1.2.wav");
 	beats.push_back("beat2.1.wav");
 		beats.push_back("beat2.2.wav");
+	beats.push_back("beat3.1.wav");
+		beats.push_back("beat3.2.wav");
 	
-	//TODO fill randomly (keeping the parts together)
-	beatsToPlay = beats;
-	
-	//heart.loadSound("sounds/beat.wav");
-	//heart.loadSound("sounds/beat1.1.wav");
+	refillBeatsToPlay();
 }
 void HeartBeatSoundPlayer::beat()
 {
@@ -68,6 +47,7 @@ void HeartBeatSoundPlayer::onTick(int  & count)
 	string url = "sounds/" + beatsToPlay.front();
 	cout << "  url: " << url << "\n";
 	beatsToPlay.erase(beatsToPlay.begin());
+	
 	heart.loadSound(url);
 	heart.play();
 	
@@ -78,5 +58,25 @@ void HeartBeatSoundPlayer::onTick(int  & count)
 void HeartBeatSoundPlayer::refillBeatsToPlay()
 {
 	cout << "HeartBeatSoundPlayer::refillBeatsToPlay\n";
-	beatsToPlay = beats;
+	beatsToPlay = shuffle(beats);
+}
+
+
+
+vector<string > HeartBeatSoundPlayer::shuffle(vector<string> toShuffle)
+{	
+	vector<string> copy = toShuffle;
+	vector<string> shuffled;
+	
+	vector<string>::iterator iter;
+	while(copy.size() > 0)
+	 {
+		int randomIndex = ofRandom(0,copy.size()/2);
+		iter = copy.begin()+randomIndex*2;
+		shuffled.push_back(*iter);
+		iter = copy.erase(iter);
+		shuffled.push_back(*iter);
+		copy.erase(iter);
+	 }
+	return shuffled;
 }
