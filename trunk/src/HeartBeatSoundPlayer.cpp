@@ -24,6 +24,14 @@ HeartBeatSoundPlayer::HeartBeatSoundPlayer()
 		beats.push_back("beat2.2.wav");
 	beats.push_back("beat3.1.wav");
 		beats.push_back("beat3.2.wav");
+	beats.push_back("beat4.1.wav");
+		beats.push_back("beat4.2.wav");
+	beats.push_back("beat5.1.wav");
+		beats.push_back("beat5.2.wav");
+	beats.push_back("beat6.1.wav");
+		beats.push_back("beat6.2.wav");
+	beats.push_back("beat7.1.wav");
+		beats.push_back("beat7.2.wav");
 	
 	refillBeatsToPlay();
 }
@@ -60,8 +68,6 @@ void HeartBeatSoundPlayer::refillBeatsToPlay()
 	cout << "HeartBeatSoundPlayer::refillBeatsToPlay\n";
 	beatsToPlay = shuffle(beats);
 }
-
-
 
 vector<string > HeartBeatSoundPlayer::shuffle(vector<string> toShuffle)
 {	
