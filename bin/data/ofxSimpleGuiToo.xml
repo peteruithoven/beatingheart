@@ -10,16 +10,16 @@
     </Toggle_useManualFlowValue>
     <SliderFloat_manualFlowValue>
         <name>manualFlowValue</name>
-        <value>0.120833</value>
+        <value>0.966667</value>
     </SliderFloat_manualFlowValue>
     <SliderFloat_RO>
         <_flowValue></_flowValue>
         <name>RO: flowValue</name>
-        <value>0.120833</value>
+        <value>0.966667</value>
     </SliderFloat_RO>
     <SliderInt_flowIntervalRatio>
         <name>flowIntervalRatio</name>
-        <value>2550</value>
+        <value>2175</value>
     </SliderInt_flowIntervalRatio>
     <SliderInt_baseInterval>
         <name>baseInterval</name>
@@ -28,6 +28,6 @@
     <SliderInt_RO>
         <_interval></_interval>
         <name>RO: interval</name>
-        <value>2991</value>
+        <value>822</value>
     </SliderInt_RO>
 </controls>
