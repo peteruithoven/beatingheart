@@ -23,6 +23,7 @@ void Settings::setup()
 	
 	gui.addToggle("useManualFlowValue", model->useManualFlowValue);
 	gui.addSlider("manualFlowValue",model->manualFlowValue,0,1);
+	gui.addSlider("Num averaging frames",model->numAveragingFrames,1,100);
 	gui.addSlider("RO: flowValue", model->flowValue, 0,1);
 	gui.addSlider("flowIntervalRatio",model->flowIntervalRatio,2000,8000);
 	gui.addSlider("baseInterval",model->baseInterval,0,10000);

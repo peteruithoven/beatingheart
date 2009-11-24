@@ -30,6 +30,8 @@ class Model{
 		int flowIntervalRatio;
 		int baseInterval;
 		int interval;
+		// Num frames to extract average flow Value.
+		int numAveragingFrames;
 	
 		bool getDebug();
 		void setDebug(bool debug);
@@ -41,10 +43,13 @@ class Model{
 		
 	protected:
 		Timer timer;
+		vector<float> flowValueHistory;
+	
 		void update(ofEventArgs & args);
 		void onTick(int  & count);
 		void updateInterval();
 		void beat();
+		float average(const vector<float> & v);
 };
 
 #endif
