@@ -8,6 +8,7 @@
  */
 
 #include "Model.h"
+#include <numeric>
 
 Model::Model()
 {
@@ -32,15 +33,34 @@ void Model::start()
 
 void Model::updateInterval()
 {
-	// limit flowValue
+	cout << "Model::updateInterval\n";
 	if(useManualFlowValue)
 		flowValue = manualFlowValue;
-	
+
+	// limit flowValue
 	if(flowValue < 0)
 		flowValue = 0;
 	else if(flowValue > 1)
 		flowValue = 1;	
 	
+	// keep flow Value History to calculate average flowValue 
+	//   over a number of frames
+	//cout << "flowValueHistory.size() > numAveragingFrames\n";
+	//cout << "  " << flowValueHistory.size() << " > " << numAveragingFrames << "\n";
+	while(flowValueHistory.size() >= numAveragingFrames)
+		flowValueHistory.erase(flowValueHistory.begin());
+	flowValueHistory.push_back(flowValue);
+	
+	/*cout << "  flowValueHistory: \n";
+	vector<float>::const_iterator i;
+	for(i = flowValueHistory.begin();i!=flowValueHistory.end();i++)
+	{
+	   cout << "    *i: " << *i << endl;
+	}*/
+	
+	float averageFlowValue = average(flowValueHistory);
+	//cout << "    averageFlowValue: " << averageFlowValue << endl;
+		
 	interval = (1-flowValue)*flowIntervalRatio;
 	interval += baseInterval;
 	
@@ -63,17 +83,10 @@ void Model::beat()
 	ofNotifyEvent(BEAT,someInt,this);
 }
 
-// ------ PROPERTIES --------
-int Model::getInterval()
+float Model::average(const vector<float> & v)
 {
-	return interval;
+	return accumulate(v.begin(),v.end(),0.0)/v.size();
 }
 
-bool Model::getDebug()
-{
-	return false; //TODO implement
-}
-void Model::setDebug(bool debug)
-{
-	//TODO implement
-}
+
+
