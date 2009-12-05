@@ -57,6 +57,7 @@ void HeartBeatSoundPlayer::onTick(int  & count)
 	beatsToPlay.erase(beatsToPlay.begin());
 	
 	heart.loadSound(url);
+	heart.setVolume(1);
 	heart.play();
 	
 	if(beatsToPlay.size() == 0)

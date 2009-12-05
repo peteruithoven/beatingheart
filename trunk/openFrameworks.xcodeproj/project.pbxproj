@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D001605110B2291000726473 /* ofxSimpleSerial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D001604210B2291000726473 /* ofxSimpleSerial.cpp */; };
+		D012E6B710C7D65B00F1A41B /* Detection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D012E6B510C7D65B00F1A41B /* Detection.cpp */; };
 		D026372110B7681000BCB4DB /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026371F10B7681000BCB4DB /* Timer.cpp */; };
 		D026377110B7686500BCB4DB /* ofxMSAInteractiveObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026373B10B7686500BCB4DB /* ofxMSAInteractiveObject.cpp */; };
 		D026377610B7686500BCB4DB /* ofxSimpleGuiConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D026375310B7686500BCB4DB /* ofxSimpleGuiConfig.cpp */; };
@@ -100,6 +101,8 @@
 /* Begin PBXFileReference section */
 		D001604210B2291000726473 /* ofxSimpleSerial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxSimpleSerial.cpp; path = openFrameworks/addons/ofxSimpleSerial/src/ofxSimpleSerial.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D001604310B2291000726473 /* ofxSimpleSerial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleSerial.h; path = openFrameworks/addons/ofxSimpleSerial/src/ofxSimpleSerial.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D012E6B510C7D65B00F1A41B /* Detection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Detection.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/Detection.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		D012E6B610C7D65B00F1A41B /* Detection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Detection.h; path = openFrameworks/apps/projects/BeatingHeart/src/Detection.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D026371F10B7681000BCB4DB /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = openFrameworks/apps/projects/BeatingHeart/src/Timer.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D026372010B7681000BCB4DB /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = openFrameworks/apps/projects/BeatingHeart/src/Timer.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		D026373B10B7686500BCB4DB /* ofxMSAInteractiveObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxMSAInteractiveObject.cpp; path = openFrameworks/addons/ofxMSAInteractiveObject/src/ofxMSAInteractiveObject.cpp; sourceTree = SYSTEM_DEVELOPER_DIR; };
@@ -573,6 +576,8 @@
 		D0317A8110B222B9002A5548 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				D012E6B510C7D65B00F1A41B /* Detection.cpp */,
+				D012E6B610C7D65B00F1A41B /* Detection.h */,
 				D0317A7410B222AE002A5548 /* Model.cpp */,
 				D0317A7510B222AE002A5548 /* Model.h */,
 			);
@@ -1414,6 +1419,7 @@
 				D026378A10B7695900BCB4DB /* FysicalHeart.cpp in Sources */,
 				D026378B10B7695900BCB4DB /* HeartBeatSoundPlayer.cpp in Sources */,
 				D026378E10B7696500BCB4DB /* Settings.cpp in Sources */,
+				D012E6B710C7D65B00F1A41B /* Detection.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

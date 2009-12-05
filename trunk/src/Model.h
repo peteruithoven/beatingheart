@@ -13,19 +13,24 @@
 #include "ofEvents.h"
 #include "ofxXmlSettings.h"
 #include "Timer.h"
+#include "Detection.h"
 
 class Model{
 
 	public:
 		ofxXmlSettings xml;
-		
+		Detection detection;
+	
 		Model();
 		void start();
 	
 		int getInterval();
 	
+		float maxDecreasePercentage;
+		float prevAverage;
 		float flowValue;
 		float manualFlowValue;
+		float flowValueMultiplier;
 		bool useManualFlowValue;
 		int flowIntervalRatio;
 		int baseInterval;
@@ -50,6 +55,7 @@ class Model{
 		void updateInterval();
 		void beat();
 		float average(const vector<float> & v);
+	float bezierAverage(const vector<float> & v);
 };
 
 #endif
