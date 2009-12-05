@@ -6,16 +6,20 @@
 <controls>
     <Toggle_useManualFlowValue>
         <name>useManualFlowValue</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_useManualFlowValue>
     <SliderFloat_manualFlowValue>
         <name>manualFlowValue</name>
-        <value>0.000000</value>
+        <value>0.950000</value>
     </SliderFloat_manualFlowValue>
     <SliderInt_Num_averaging_frames>
         <name>Num averaging frames</name>
-        <value>1</value>
+        <value>3</value>
     </SliderInt_Num_averaging_frames>
+    <SliderFloat_FlowValue_multiplier>
+        <name>FlowValue multiplier</name>
+        <value>4.333333</value>
+    </SliderFloat_FlowValue_multiplier>
     <SliderFloat_RO>
         <_flowValue></_flowValue>
         <name>RO: flowValue</name>
@@ -23,15 +27,19 @@
     </SliderFloat_RO>
     <SliderInt_flowIntervalRatio>
         <name>flowIntervalRatio</name>
-        <value>6575</value>
+        <value>3275</value>
     </SliderInt_flowIntervalRatio>
     <SliderInt_baseInterval>
         <name>baseInterval</name>
-        <value>1291</value>
+        <value>1041</value>
     </SliderInt_baseInterval>
+    <SliderFloat_max_decrease_percentage>
+        <name>max decrease percentage</name>
+        <value>0.003125</value>
+    </SliderFloat_max_decrease_percentage>
     <SliderInt_RO>
         <_interval></_interval>
         <name>RO: interval</name>
-        <value>7866</value>
+        <value>4260</value>
     </SliderInt_RO>
 </controls>

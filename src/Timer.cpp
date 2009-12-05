@@ -55,6 +55,8 @@ int Timer::getInterval()
 void Timer::setInterval(int value)
 {
 	interval = value;
+	if(interval < 500)
+		interval = 500;
 	//cout << "interval: " << interval << endl;
 };
 int Timer::getRepeatCount()
